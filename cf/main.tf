@@ -54,6 +54,7 @@ resource "null_resource" "prepare_app_zip" {
   }
   provisioner "local-exec" {
     command = <<EOF
+        set -x
         mkdir -p ${var.dir_to_clone}
         cd ${var.dir_to_clone}
         git init

@@ -1,4 +1,4 @@
-variable ibmcloud_api_key {}
+#variable ibmcloud_api_key {}
 variable ssh_key_name {}
 variable resource_group_name {}
 
@@ -22,7 +22,7 @@ variable "basename" {
 
 provider ibm {
   region           = "${var.region}"
-  ibmcloud_api_key = "${var.ibmcloud_api_key}"
+  #ibmcloud_api_key = "${var.ibmcloud_api_key}"
   ibmcloud_timeout = "${var.ibmcloud_timeout}"
   generation       = 1                         # vpc on classic
 }
