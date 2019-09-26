@@ -55,6 +55,11 @@ resource "null_resource" "prepare_app_zip" {
   provisioner "local-exec" {
     command = <<EOF
         set -x
+        ls -lisa
+        ibmcloud plugin list
+        curl
+        wget
+        apt update
         mkdir -p ${var.dir_to_clone}
         cd ${var.dir_to_clone}
         git init
@@ -62,9 +67,8 @@ resource "null_resource" "prepare_app_zip" {
         git fetch
         git checkout -t origin/master
         zip -r ${var.app_zip} *
-        ls -l
-        ls -l /
-        ls -l ${var.app_zip}
+        ls -lisa /
+        ls -lisa /tmp
         env
         EOF
   }
