@@ -16,3 +16,7 @@ resource "aws_s3_bucket" "frontend" {
   }
 }
 
+output id {
+  value = "${aws_s3_bucket.frontend.id}"
+}
+  
