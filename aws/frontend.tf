@@ -1,5 +1,6 @@
 variable aws_access_key_id {}
 variable aws_secret_access_key {}
+variable fun {}
 
 provider "aws" {
   region     = "us-west-2"
