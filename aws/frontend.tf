@@ -13,6 +13,7 @@ resource "aws_s3_bucket" "frontend" {
 
   tags = {
     Name        = "frontend"
+    fun         = "funfooer"
   }
 }
 
